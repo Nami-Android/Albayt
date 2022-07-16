@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+        <variable
+            name="model"
+            type="com.apps.albayt.model.ProductModel" />
+        <import type="android.text.Html"/>
+    </data>
+   <androidx.core.widget.NestedScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:fillViewport="true"
+       android:scrollbars="none"
+       >
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textSize="14sp"
+           android:fontFamily="@font/font_regular"
+           android:padding="16dp"
+           android:gravity="start"
+           android:textColor="@color/black"
+           android:text="@{Html.fromHtml(model.specification)}"
+
+           />
+   </androidx.core.widget.NestedScrollView>
+</layout>

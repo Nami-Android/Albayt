@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "480385177787",
+    "project_id": "albayt-62800",
+    "storage_bucket": "albayt-62800.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:480385177787:android:75fdf8209d0008d40bf19e",
+        "android_client_info": {
+          "package_name": "com.apps.albayt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "480385177787-d8up0vs2h0vfvg272ckcpm12pp4mu62t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.apps.albayt",
+            "certificate_hash": "0b354f3a0c02eaba29510595124a7d68aea8edf3"
+          }
+        },
+        {
+          "client_id": "480385177787-gouivabrm8rg3c6hlfmpvlo2o8102jk6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXy85uRxDOANRJSCbUlIQ9NyHIRF0kkno"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "480385177787-gouivabrm8rg3c6hlfmpvlo2o8102jk6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

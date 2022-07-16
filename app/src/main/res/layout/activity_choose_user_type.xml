@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="lang"
+            type="String" />
+
+        <variable
+            name="model"
+            type="com.apps.albayt.model.LoginModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/grey9"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="312dp"
+                    android:layout_height="208dp"
+                    android:scaleX='@{lang.equals("ar")?-1:1}'
+                    android:src="@drawable/user_type_top"
+                    android:layout_gravity="end"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/font_bold"
+                    android:gravity="center"
+                    android:text="@string/please_select_an_account_type"
+                    android:textColor="@color/grey8"
+                    android:textSize="14sp" />
+
+
+                <LinearLayout
+                    android:id="@+id/llUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="116dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/small_rounded_stroke2_grey7"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="8dp"
+                    android:paddingTop="8dp"
+
+                    >
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimary"
+                            android:text="@string/user"
+                            android:fontFamily="@font/font_bold"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:textColor="@color/grey8"
+                            android:text="@string/normal_user_for_app"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/font_regular"
+                            />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/normal_user"
+                        />
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="16dp"
+                    >
+                    <View
+                        android:id="@+id/v1"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/v2"
+                        android:background="@drawable/small_rounded_stroke2_grey7"
+                        app:layout_constraintDimensionRatio="1"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="@id/v1"
+                        app:layout_constraintEnd_toEndOf="@id/v1"
+                        app:layout_constraintTop_toTopOf="@id/v1"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/font_bold"
+                        android:text="@string/suppliers"
+                        android:textAlignment="viewStart"
+                        android:gravity="start"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="16dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="@id/v1"
+                        app:layout_constraintEnd_toEndOf="@id/v1"
+                        app:layout_constraintTop_toBottomOf="@id/tv1"
+                        android:textColor="@color/grey8"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/font_regular"
+                        android:text="@string/selling_products_to_customers"
+                        android:textAlignment="viewStart"
+                        android:gravity="start"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="12dp"
+                        />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintStart_toStartOf="@id/v1"
+                        app:layout_constraintEnd_toEndOf="@id/v1"
+                        app:layout_constraintBottom_toBottomOf="@id/v1"
+                        app:layout_constraintDimensionRatio="1:.36"
+                        android:src="@drawable/sup_bottom_bg"
+                        />
+
+
+                    <View
+                        android:id="@+id/v2"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintStart_toEndOf="@id/v1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:background="@drawable/small_rounded_stroke2_grey7"
+                        app:layout_constraintDimensionRatio="1"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="@id/v2"
+                        app:layout_constraintEnd_toEndOf="@id/v2"
+                        app:layout_constraintTop_toTopOf="@id/v2"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/font_bold"
+                        android:text="@string/contoractors"
+                        android:textAlignment="viewStart"
+                        android:gravity="start"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="16dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="@id/v2"
+                        app:layout_constraintEnd_toEndOf="@id/v2"
+                        app:layout_constraintTop_toBottomOf="@id/tv3"
+                        android:textColor="@color/grey8"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/font_regular"
+                        android:text="@string/installing_products_for_customers"
+                        android:textAlignment="viewStart"
+                        android:gravity="start"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="12dp"
+                        />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintStart_toStartOf="@id/v2"
+                        app:layout_constraintEnd_toEndOf="@id/v2"
+                        app:layout_constraintBottom_toBottomOf="@id/v2"
+                        app:layout_constraintDimensionRatio="1:.36"
+                        android:src="@drawable/cont_bottom_bg"
+                        />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</layout>
