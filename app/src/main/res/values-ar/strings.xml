@@ -170,4 +170,9 @@
     <string name="certs">الشهادات</string>
     <string name="share_with">مشاركة عبر :</string>
     <string name="blog_details">تفاصيل الخبر</string>
+    <string name="sup_name">إسم المورد</string>
+    <string name="cont_numb">رقم جوال للتواصل</string>
+    <string name="whats_number">رقم واتس اب للتواصل</string>
+    <string name="comm_number">الرقم التجاري</string>
+    <string name="back">عودة</string>
 </resources>

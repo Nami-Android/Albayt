@@ -1,5 +1,6 @@
 package com.apps.albayt.uis.activity_base;
 
+import android.Manifest;
 import android.content.Context;
 
 import androidx.annotation.NonNull;
@@ -12,6 +13,11 @@ import com.apps.albayt.preferences.Preferences;
 import io.paperdb.Paper;
 
 public class BaseFragment extends Fragment {
+    public static final String READ_PERM = Manifest.permission.READ_EXTERNAL_STORAGE;
+    public static final String WRITE_PERM = Manifest.permission.WRITE_EXTERNAL_STORAGE;
+    public static final String CAM_PERM = Manifest.permission.CAMERA;
+    public static final String FINELOCPerm = Manifest.permission.ACCESS_FINE_LOCATION;
+
     private Context context;
 
     @Override

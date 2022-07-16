@@ -21,6 +21,7 @@ import com.apps.albayt.model.UserModel;
 import com.apps.albayt.mvvm.ActivityLoginMvvm;
 import com.apps.albayt.uis.activity_base.BaseActivity;
 import com.apps.albayt.uis.activity_sign_up.SignUpActivity;
+import com.apps.albayt.uis.activity_sign_up_supplier.SignUpSupplierActivity;
 
 public class ChooseUserTypeActivity extends BaseActivity {
     private ActivityChooseUserTypeBinding binding;
@@ -55,6 +56,13 @@ public class ChooseUserTypeActivity extends BaseActivity {
 
         binding.llUser.setOnClickListener(view -> {
             Intent intent = new Intent(this, SignUpActivity.class);
+            intent.putExtra("phone_code",phone_code);
+            intent.putExtra("phone",phone);
+            launcher.launch(intent);
+        });
+
+        binding.v1.setOnClickListener(view -> {
+            Intent intent = new Intent(this, SignUpSupplierActivity.class);
             intent.putExtra("phone_code",phone_code);
             intent.putExtra("phone",phone);
             launcher.launch(intent);
