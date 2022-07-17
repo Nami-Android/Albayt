@@ -178,5 +178,7 @@
     <string name="back">Back</string>
     <string name="ch_category">Choose Category</string>
     <string name="city">City</string>
+    <string name="cont_name">Contractor name</string>
+    <string name="portfolio">Portfolio</string>
 
 </resources>
