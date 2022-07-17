@@ -2,6 +2,7 @@ package com.apps.albayt.services;
 
 
 import com.apps.albayt.model.AddressesDataModel;
+import com.apps.albayt.model.CategoryDataModel;
 import com.apps.albayt.model.CityDataModel;
 import com.apps.albayt.model.ContractorDataModel;
 import com.apps.albayt.model.MainHomeDataModel;
@@ -54,6 +55,9 @@ public interface Service {
                                                            @Query("search_name") String search_name,
                                                            @Query("lang") String lang
     );
+
+    @GET("api/settings/categories")
+    Single<Response<CategoryDataModel>> getCategories(@Query("lang") String lang);
 
 
     @GET("api/contractors")

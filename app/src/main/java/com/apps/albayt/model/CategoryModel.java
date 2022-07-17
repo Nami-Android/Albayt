@@ -10,11 +10,10 @@ public class CategoryModel implements Serializable {
     private boolean selected;
     private List<CategoryModel> sub_categories;
 
-    public CategoryModel(String id, String title, String image, boolean selected) {
+    public CategoryModel(String id, String title) {
         this.id = id;
         this.title= title;
-        this.image = image;
-        this.selected = selected;
+
     }
 
     public String getId() {

@@ -55,12 +55,28 @@
                         android:textSize="16sp" />
 
                 </LinearLayout>
+
                 <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/small_rounded_stroke_grey4"
+
+                    >
+                    <Spinner
+                        android:id="@+id/spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        />
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/flCategory"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/small_rounded_stroke_grey4"
                     android:paddingStart="8dp"
                     android:paddingEnd="8dp"
+                    android:layout_marginTop="16dp"
+                    android:visibility="gone"
 
                     >
                     <androidx.recyclerview.widget.RecyclerView
@@ -188,21 +204,9 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
             >
-            <Button
-                android:id="@+id/start"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="8dp"
-                android:background="@drawable/small_stroke_primary"
-                android:textColor="@color/colorPrimary"
-                android:textSize="16sp"
-                android:fontFamily="@font/font_regular"
-                android:text="@string/back"
-                />
             <Button
                 android:id="@+id/back"
                 android:layout_width="0dp"
@@ -210,12 +214,26 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginBottom="8dp"
+                android:background="@drawable/rounded_white_stroke_color2"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:fontFamily="@font/font_regular"
+                android:text="@string/back"
+                android:layout_marginBottom="2dp"
+                />
+            <Button
+                android:id="@+id/start"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 android:background="@drawable/btn_enabled"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:fontFamily="@font/font_regular"
                 android:text="@string/let_s_start"
+                android:layout_marginBottom="2dp"
                 android:enabled="@{model.step2Valid,default=false}"
                 />
         </LinearLayout>

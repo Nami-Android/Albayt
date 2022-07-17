@@ -183,7 +183,7 @@ public class SupplierSignUpModel extends BaseObservable implements Serializable 
     }
 
     public void setCategories(List<CategoryModel> categories) {
-        this.categories = categories;
+        this.categories = new ArrayList<>(categories);
         isStep2ValidData();
     }
 }

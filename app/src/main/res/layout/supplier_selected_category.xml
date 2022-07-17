@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="model"
+            type="com.apps.albayt.model.CategoryModel" />
+
+    </data>
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="3dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:contentPaddingLeft="8dp"
+        app:contentPaddingRight="8dp"
+        android:layout_margin="4dp"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_gravity="center"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:fontFamily="@font/font_regular"
+                android:text="@{model.title}"
+                android:maxEms="12"
+                android:lines="1"
+                android:ellipsize="end"
+                />
+            <androidx.legacy.widget.Space
+                android:layout_width="5dp"
+                android:layout_height="0dp"/>
+            <ImageView
+                android:id="@+id/delete"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_close"
+                android:padding="5dp"
+                />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

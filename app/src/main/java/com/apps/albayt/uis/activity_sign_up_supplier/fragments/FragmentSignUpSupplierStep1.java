@@ -131,6 +131,9 @@ public class FragmentSignUpSupplierStep1 extends BaseFragment {
         model.setPhone(phone);
 
         binding.setModel(model);
+        binding.next.setOnClickListener(view -> {
+            activity.navigateToNextFragment(model);
+        });
         binding.image.setOnClickListener(view -> {
             openSheet();
         });

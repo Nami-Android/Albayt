@@ -126,7 +126,7 @@
         <entry key="..\:/works/Courses/work_android/NamiCompany/Albayt/app/src/main/res/layout/fragment_search.xml" value="0.22083333333333333" />
         <entry key="..\:/works/Courses/work_android/NamiCompany/Albayt/app/src/main/res/layout/fragment_setting.xml" value="0.22083333333333333" />
         <entry key="..\:/works/Courses/work_android/NamiCompany/Albayt/app/src/main/res/layout/fragment_sign_up_supplier_step1.xml" value="0.20260416666666667" />
-        <entry key="..\:/works/Courses/work_android/NamiCompany/Albayt/app/src/main/res/layout/fragment_sign_up_supplier_step2.xml" value="0.176" />
+        <entry key="..\:/works/Courses/work_android/NamiCompany/Albayt/app/src/main/res/layout/fragment_sign_up_supplier_step2.xml" value="0.264" />
         <entry key="..\:/works/Courses/work_android/NamiCompany/Albayt/app/src/main/res/layout/fragment_specification.xml" value="0.22083333333333333" />
         <entry key="..\:/works/Courses/work_android/NamiCompany/Albayt/app/src/main/res/layout/fragment_suppliers.xml" value="0.22083333333333333" />
         <entry key="..\:/works/Courses/work_android/NamiCompany/Albayt/app/src/main/res/layout/galler_row.xml" value="0.21979166666666666" />
@@ -156,6 +156,7 @@
         <entry key="..\:/works/Courses/work_android/NamiCompany/Albayt/app/src/main/res/layout/slider_loader.xml" value="0.22083333333333333" />
         <entry key="..\:/works/Courses/work_android/NamiCompany/Albayt/app/src/main/res/layout/spinner_row.xml" value="0.22083333333333333" />
         <entry key="..\:/works/Courses/work_android/NamiCompany/Albayt/app/src/main/res/layout/sub_category_row.xml" value="0.22083333333333333" />
+        <entry key="..\:/works/Courses/work_android/NamiCompany/Albayt/app/src/main/res/layout/supplier_selected_category.xml" value="0.22083333333333333" />
         <entry key="..\:/works/Courses/work_android/NamiCompany/Albayt/app/src/main/res/layout/time_spinner_row.xml" value="0.22083333333333333" />
         <entry key="..\:/works/Courses/work_android/NamiCompany/Albayt/app/src/main/res/menu/menu.xml" value="0.22083333333333333" />
       </map>
