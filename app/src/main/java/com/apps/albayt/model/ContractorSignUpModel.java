@@ -167,7 +167,6 @@ public class ContractorSignUpModel extends BaseObservable implements Serializabl
         isStep2ValidData();
     }
 
-
     public List<CategoryModel> getCategories() {
         return categories;
     }
