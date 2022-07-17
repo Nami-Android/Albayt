@@ -133,7 +133,9 @@ public class FragmentSignUpSupplierStep2 extends BaseFragment {
         selectedCategories.remove(adapterPosition);
         model.setCategories(selectedCategories);
         adapter.removeItem(adapterPosition);
+
         binding.spinner.setSelection(0);
+
         if (selectedCategories.size()==0){
             binding.flCategory.setVisibility(View.GONE);
 
