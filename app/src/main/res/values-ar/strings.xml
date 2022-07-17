@@ -175,4 +175,6 @@
     <string name="whats_number">رقم واتس اب للتواصل</string>
     <string name="comm_number">الرقم التجاري</string>
     <string name="back">عودة</string>
+    <string name="cont_name">Contractor name</string>
+    <string name="portfolio">Portfolio</string>
 </resources>

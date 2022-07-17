@@ -176,5 +176,7 @@
     <string name="whats_number">WhatsApp Number</string>
     <string name="comm_number">Commercial Number</string>
     <string name="back">Back</string>
+    <string name="cont_name">Contractor name</string>
+    <string name="portfolio">Portfolio</string>
 
 </resources>
