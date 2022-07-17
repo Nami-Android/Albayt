@@ -177,5 +177,6 @@
     <string name="comm_number">Commercial Number</string>
     <string name="back">Back</string>
     <string name="ch_category">Choose Category</string>
+    <string name="city">City</string>
 
 </resources>
