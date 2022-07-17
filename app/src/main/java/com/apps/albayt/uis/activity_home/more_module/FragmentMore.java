@@ -75,8 +75,14 @@ public class FragmentMore extends BaseFragment {
         binding.setModel(getUserModel());
         binding.layoutProfile.setLang(getLang());
         if (getUserModel()!=null){
-            binding.layoutProfile.setLang(getLang());
-            binding.layoutProfile.setModel(getUserModel());
+            if (getUserModel().getData().getUser_type().equals("client")){
+                binding.layoutProfile.setLang(getLang());
+                binding.layoutProfile.setModel(getUserModel());
+            }else if (getUserModel().getData().getUser_type().equals("supplier")){
+                binding.layoutSupplierProfile.setLang(getLang());
+                binding.layoutSupplierProfile.setModel(getUserModel());
+            }
+
         }else {
             binding.layoutLogin.setLang(getLang());
         }
@@ -94,6 +100,8 @@ public class FragmentMore extends BaseFragment {
             Intent intent = new Intent(activity, NewsActivity.class);
             startActivity(intent);
         });
+
+
         binding.layoutProfile.cardMyList.setOnClickListener(view -> {
             Intent intent = new Intent(activity, OrdersActivity.class);
             startActivity(intent);
@@ -104,6 +112,24 @@ public class FragmentMore extends BaseFragment {
 
         binding.layoutProfile.cardMyAddresses.setOnClickListener(view -> {
             generalMvvm.onHomeNavigate().setValue(6);
+        });
+
+        binding.layoutSupplierProfile.cardNews.setOnClickListener(view -> {
+            Intent intent = new Intent(activity, NewsActivity.class);
+            startActivity(intent);
+        });
+
+        binding.layoutSupplierProfile.cardMyAddresses.setOnClickListener(view -> {
+            generalMvvm.onHomeNavigate().setValue(6);
+
+        });
+
+        binding.layoutSupplierProfile.cardMyList.setOnClickListener(view -> {
+            Intent intent = new Intent(activity, OrdersActivity.class);
+            startActivity(intent);
+        });
+        binding.layoutSupplierProfile.carViewSetting.setOnClickListener(view -> {
+            generalMvvm.onHomeNavigate().setValue(7);
         });
 
 

@@ -123,10 +123,56 @@
 
                     >
                     <Spinner
-                        android:id="@+id/spinner"
+                        android:id="@+id/spinnerCity"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_pin"
+                        app:tint="@color/colorPrimary"
+
+                        />
+
+                    <androidx.legacy.widget.Space
+                        android:layout_width="8dp"
+                        android:layout_height="0dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/font_regular"
+                        android:text="@string/address"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/flAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/small_rounded_stroke_grey4"
+
+                    >
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center_vertical"
+                       android:layout_marginStart="16dp"
+                       android:layout_marginEnd="16dp"
+                       android:text="@{model.address}"
+
+                       />
                 </FrameLayout>
 
 

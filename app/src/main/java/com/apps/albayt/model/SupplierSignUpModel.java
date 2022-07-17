@@ -21,6 +21,10 @@ public class SupplierSignUpModel extends BaseObservable implements Serializable 
     private String phone_whatsapp;
     private String vat_number;
     private String commercial_number;
+    private String city_id;
+    private String  address;
+    private double lat;
+    private double lng;
     private List<CategoryModel> categories;
     private boolean isStep1Valid;
     private boolean isStep2Valid;
@@ -35,6 +39,10 @@ public class SupplierSignUpModel extends BaseObservable implements Serializable 
         phone_whatsapp = "";
         vat_number = "";
         commercial_number ="";
+        city_id ="";
+        address = "";
+        lat =0.0;
+        lng =0.0;
         categories = new ArrayList<>();
         isStep1Valid = false;
         isStep2Valid = false;
@@ -57,7 +65,9 @@ public class SupplierSignUpModel extends BaseObservable implements Serializable 
     private void isStep2ValidData() {
         if (!vat_number.isEmpty() &&
                 !commercial_number.isEmpty()&&
-                categories.size()>0
+                categories.size()>0&&
+                !city_id.isEmpty()&&
+                !address.isEmpty()
         ) {
             setStep2Valid(true);
         } else {
@@ -185,5 +195,39 @@ public class SupplierSignUpModel extends BaseObservable implements Serializable 
     public void setCategories(List<CategoryModel> categories) {
         this.categories = new ArrayList<>(categories);
         isStep2ValidData();
+    }
+
+    public String getCity_id() {
+        return city_id;
+    }
+
+    public void setCity_id(String city_id) {
+        this.city_id = city_id;
+    }
+
+    @Bindable
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+        notifyPropertyChanged(BR.address);
+    }
+
+    public double getLat() {
+        return lat;
+    }
+
+    public void setLat(double lat) {
+        this.lat = lat;
+    }
+
+    public double getLng() {
+        return lng;
+    }
+
+    public void setLng(double lng) {
+        this.lng = lng;
     }
 }

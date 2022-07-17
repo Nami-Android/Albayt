@@ -121,6 +121,25 @@ public interface Service {
     );
 
     @Multipart
+    @POST("api/users/register/supplier")
+    Observable<Response<UserModel>> signUpSupplier(@Part("supplier_name") RequestBody supplier_name,
+                                                   @Part("phone_code") RequestBody phone_code,
+                                                   @Part("phone") RequestBody phone,
+                                                   @Part("email") RequestBody email,
+                                                   @Part("contact_phone") RequestBody contact_phone,
+                                                   @Part("contact_whats_up") RequestBody contact_whats_up,
+                                                   @Part("city_id") RequestBody city_id,
+                                                   @Part("vat_number") RequestBody vat_number,
+                                                   @Part("comerical_number") RequestBody comerical_number,
+                                                   @Part("latitude") RequestBody latitude,
+                                                   @Part("longitude") RequestBody longitude,
+                                                   @Part("categories[]") List<RequestBody> categories,
+                                                   @Part MultipartBody.Part logo
+
+
+    );
+
+    @Multipart
     @POST("api/users/client/update")
     Observable<Response<UserModel>> updateProfile(@Part("user_id") RequestBody user_id,
                                                   @Part("first_name") RequestBody first_name,
@@ -208,11 +227,10 @@ public interface Service {
                                                                @Query("user_id") String user_id);
 
 
-
     @FormUrlEncoded
     @POST("api/users/client/address/delete")
     Single<Response<StatusResponse>> deleteAddress(@Header("AUTHORIZATION") String token,
-                                                      @Field("id") String id
+                                                   @Field("id") String id
     );
 
     @POST("api/storeOrder")
